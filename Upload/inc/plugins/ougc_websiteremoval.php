@@ -38,8 +38,6 @@ if(defined('IN_ADMINCP'))
 }
 else
 {
-	define('OUGC_WEBSITEREMOVAL_GROUPS', '');
-
 	foreach(array('member_profile_end', 'postbit_prev', 'postbit_pm', 'postbit_announcement', 'postbit') as $hook)
 	{
 		$plugins->add_hook($hook, 'ougc_websiteremoval');
@@ -58,8 +56,8 @@ function ougc_websiteremoval_info()
 		'website'		=> 'http://omarg.me',
 		'author'		=> 'Omar G.',
 		'authorsite'	=> 'http://omarg.me',
-		'version'		=> '0.9',
-		'versioncode'	=> 0900,
+		'version'		=> '0.9.1',
+		'versioncode'	=> 0910,
 		'compatibility'	=> '16*'
 	);
 }
@@ -224,7 +222,7 @@ function ougc_websiteremoval(&$post)
 	if(THIS_SCRIPT != 'member.php')
 	{
 		$var = 'post';
-		$website = &$post['website'];
+		$website = &$post['button_www'];
 	}
 
 	if(!$PL->is_member($settings['ougc_websiteremoval_groups'], array('usergroup' => ${$var}['usergroup'], 'additionalgroups' => ${$var}['additionalgroups'])))
