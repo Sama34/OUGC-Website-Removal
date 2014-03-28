@@ -44,6 +44,9 @@ else
 	}
 }
 
+// PLUGINLIBRARY
+defined('PLUGINLIBRARY') or define('PLUGINLIBRARY', MYBB_ROOT.'inc/plugins/pluginlibrary.php');
+
 // Plugin API
 function ougc_websiteremoval_info()
 {
@@ -52,20 +55,24 @@ function ougc_websiteremoval_info()
 
 	return array(
 		'name'			=> 'OUGC Website Removal',
-		'description'	=> $lang->ougc_websiteremoval_desc,
+		'description'	=> $lang->setting_group_ougc_websiteremoval_desc,
 		'website'		=> 'http://omarg.me',
 		'author'		=> 'Omar G.',
 		'authorsite'	=> 'http://omarg.me',
 		'version'		=> '0.9.1',
-		'versioncode'	=> 0910,
-		'compatibility'	=> '16*'
+		'versioncode'	=> '0910',
+		'compatibility'	=> '16*',
+		'pl'			=> array(
+			'version'	=> 12,
+			'url'		=> 'http://mods.mybb.com/view/pluginlibrary'
+		)
 	);
 }
 
 // _activate() routine
 function ougc_websiteremoval_activate()
 {
-	global $cache;
+	global $PL, $cache;
 	ougc_websiteremoval_pl_check();
 
 	// Add settings group
