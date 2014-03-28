@@ -59,8 +59,8 @@ function ougc_websiteremoval_info()
 		'website'		=> 'http://omarg.me',
 		'author'		=> 'Omar G.',
 		'authorsite'	=> 'http://omarg.me',
-		'version'		=> '0.9.1',
-		'versioncode'	=> '0910',
+		'version'		=> '1.0',
+		'versioncode'	=> 1000,
 		'compatibility'	=> '16*',
 		'pl'			=> array(
 			'version'	=> 12,
