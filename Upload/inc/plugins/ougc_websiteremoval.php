@@ -72,7 +72,7 @@ function ougc_websiteremoval_info()
 // _activate() routine
 function ougc_websiteremoval_activate()
 {
-	global $PL, $cache;
+	global $PL, $lang, $cache;
 	ougc_websiteremoval_pl_check();
 
 	// Add settings group
